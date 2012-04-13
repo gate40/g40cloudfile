@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for the Cloud File Manager extension in the FRONTEND</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_g40cloudfile_domain_model_event">Event</label>
+			<label index="tx_g40cloudfile_domain_model_event.name">name</label>
+			<label index="tx_g40cloudfile_domain_model_event.project_nr">projectNr</label>
+			<label index="tx_g40cloudfile_domain_model_event.description">description</label>
+			<label index="tx_g40cloudfile_domain_model_event.buckets">buckets</label>
+			<label index="tx_g40cloudfile_domain_model_event.categories">categories</label>
+			<label index="tx_g40cloudfile_domain_model_category">Category</label>
+			<label index="tx_g40cloudfile_domain_model_category.name">name</label>
+			<label index="tx_g40cloudfile_domain_model_category.sort">sort</label>
+			<label index="tx_g40cloudfile_domain_model_category.label1">label1</label>
+			<label index="tx_g40cloudfile_domain_model_category.label2">label2</label>
+			<label index="tx_g40cloudfile_domain_model_category.label3">label3</label>
+			<label index="tx_g40cloudfile_domain_model_bucket">Bucket</label>
+			<label index="tx_g40cloudfile_domain_model_bucket.name">name</label>
+			<label index="tx_g40cloudfile_domain_model_bucket.description">description</label>
+			<label index="tx_g40cloudfile_domain_model_file">File</label>
+			<label index="tx_g40cloudfile_domain_model_file.filename">filename</label>
+			<label index="tx_g40cloudfile_domain_model_file.description">description</label>
+			<label index="tx_g40cloudfile_domain_model_file.text1">text1</label>
+			<label index="tx_g40cloudfile_domain_model_file.text2">text2</label>
+			<label index="tx_g40cloudfile_domain_model_file.text3">text3</label>
+			<label index="tx_g40cloudfile_domain_model_file.file_category">fileCategory</label>
+			<label index="tx_g40cloudfile_domain_model_file.file_bucket">fileBucket</label>
+		</languageKey>
+	</data>
+</T3locallang>

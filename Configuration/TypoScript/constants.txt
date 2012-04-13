@@ -1,0 +1,14 @@
+plugin.tx_g40cloudfile {
+	view {
+		# cat=plugin.tx_g40cloudfile/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:g40cloudfile/Resources/Private/Templates/
+		# cat=plugin.tx_g40cloudfile/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:g40cloudfile/Resources/Private/Partials/
+		# cat=plugin.tx_g40cloudfile/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:g40cloudfile/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_g40cloudfile//a; type=int+; label=Default storage PID
+		storagePid = 
+	}
+}

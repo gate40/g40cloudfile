@@ -1,0 +1,32 @@
+plugin.tx_g40cloudfile {
+	view {
+		templateRootPath = {$plugin.tx_g40cloudfile.view.templateRootPath}
+		partialRootPath = {$plugin.tx_g40cloudfile.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_g40cloudfile.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_g40cloudfile.persistence.storagePid}
+	}
+}
+
+plugin.tx_g40cloudfile._CSS_DEFAULT_STYLE (
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	.tx-g40cloudfile table {
+		border-collapse:separate;
+		border-spacing:10px;
+	}
+
+	.tx-g40cloudfile table th {
+		font-weight:bold;
+	}
+
+	.tx-g40cloudfile table td {
+		vertical-align:top;
+	}
+)
+
+page.includeCSS.tx_wineinsatz = EXT:g40cloudfile/Resources/Public/CSS/tx_g40cloudfile.css

@@ -1,0 +1,53 @@
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+<h1>Listing for File</h1>
+
+<f:flashMessages />
+
+<table  class="g40cloudfile-list-table" >
+	<tr>
+        <th><f:translate key="tx_g40cloudfile_domain_model_file.description" /></th>
+		<th><f:translate key="tx_g40cloudfile_domain_model_file.filename" /></th>
+
+		<th><f:translate key="tx_g40cloudfile_domain_model_file.text1" /></th>
+		<th><f:translate key="tx_g40cloudfile_domain_model_file.text2" /></th>
+        <f:for each="{buckets}" as="bucket">
+            <th>{bucket.description}</th>
+        </f:for>
+	</tr>
+
+	<f:for each="{files}" as="file">
+        <f:cycle values="{0: 'odd', 1: 'even'}" as="zebraClass">
+            <tr>
+                <td class="{zebraClass}"> {file.description}</td>
+                <td class="{zebraClass}"> {file.filename}</td>
+
+                <td class="{zebraClass}"> {file.text1}</td>
+                <td class="{zebraClass}"> {file.text2}</td>
+
+                <f:for each="{buckets}" as="bucket">
+                        <td class="{zebraClass}">
+                            <f:link.external uri="http://{bucket.name}.s3.amazonaws.com/{file.filename}" target="_self">X</f:link.external>
+                        </td>
+
+                </f:for>
+
+
+            </tr>
+        </f:cycle>
+	</f:for>
+</table>
+
+</f:section>

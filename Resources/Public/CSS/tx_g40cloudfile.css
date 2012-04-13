@@ -1,0 +1,56 @@
+.tx-g40cloudfile a {
+    outline: 0 none;
+}
+.tx-g40cloudfile .counter {
+    margin: 0.75em 0 1em;
+}
+.tx-g40cloudfile .counter span.digits {
+    font-weight: bold;
+}
+.tx-g40cloudfile .g40cloudfile-list-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.tx-g40cloudfile .g40cloudfile-list-table th {
+    background-color: #e5e5e5;
+    border: 0.091em solid #FFFFFF;
+    color: #000000;
+    padding: 0.182em 0.364em;
+}
+.tx-g40cloudfile .g40cloudfile-list-table td {
+    border: 0.091em solid #FFFFFF;
+    color: #000000;
+    padding: 0.182em 0.364em;
+}
+.tx-g40cloudfile .g40cloudfile-list-table .odd {
+    background-color: #FFFFFF;
+}
+.tx-g40cloudfile .g40cloudfile-list-table .even {
+    background-color: #E9E9E9;
+}
+.tx-g40cloudfile .g40cloudfile-list-table .vehicleImage {
+    margin: 0.5em 4px;
+}
+.tx-g40cloudfile .g40cloudfile-list-table .photoIcon {
+    margin-left: 0.5em;
+}
+.tx-g40cloudfile .detailData {
+    margin: 1em 0;
+}
+.tx-g40cloudfile dl.detailData {
+    border-bottom: 0.091em solid #C7C7C7;
+}
+.tx-g40cloudfile .detailData .vehicleImage {
+    margin: 0.5em 1em 0.5em 0;
+    outline: 0 none;
+}
+.tx-g40cloudfile .imageBlock .singleImage {
+    border: 0.091em solid #C7C7C7;
+    float: left;
+    margin: 0.5em 0.8em 0.5em 0;
+    outline: 0 none;
+    padding: 0.5em;
+}
+.tx-g40cloudfile .imageBlock .singleImageDescription {
+    margin-top: 0.5em;
+}
