@@ -1,0 +1,39 @@
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+<h1>Listing for Category</h1>
+
+<f:flashMessages />
+
+<table  class="g40cloudfile-table"  >
+	<tr>
+		<th><f:translate key="tx_g40cloudfile_domain_model_category.name" /></th>
+		<th><f:translate key="tx_g40cloudfile_domain_model_category.sort" /></th>
+		<th><f:translate key="tx_g40cloudfile_domain_model_category.label1" /></th>
+		<th><f:translate key="tx_g40cloudfile_domain_model_category.label2" /></th>
+		<th><f:translate key="tx_g40cloudfile_domain_model_category.label3" /></th>
+	</tr>
+
+	<f:for each="{categories}" as="category">
+		<tr>
+			<td><f:link.action action="show" arguments="{category : category}"> {category.name}</f:link.action></td>
+			<td>{category.sort}</td>
+			<td>{category.label1}</td>
+			<td>{category.label2}</td>
+			<td>{category.label3}</td>
+		</tr>
+	</f:for>
+</table>
+
+</f:section>

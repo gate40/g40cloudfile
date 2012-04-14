@@ -40,32 +40,32 @@ class Tx_G40cloudfile_Controller_FileController extends Tx_Extbase_MVC_Controlle
 	 */
 	protected $fileRepository;
 
-    /**
-     * bucketRepository
-     *
-     * @var Tx_G40cloudfile_Domain_Repository_BucketRepository
-     */
-    protected $bucketRepository;
+	/**
+	 * bucketRepository
+	 *
+	 * @var Tx_G40cloudfile_Domain_Repository_BucketRepository
+	 */
+	protected $bucketRepository;
 
-    /**
-     * injectFileRepository
-     *
-     * @param Tx_G40cloudfile_Domain_Repository_FileRepository $fileRepository
-     * @return void
-     */
-    public function injectFileRepository(Tx_G40cloudfile_Domain_Repository_FileRepository $fileRepository) {
-        $this->fileRepository = $fileRepository;
-    }
+	/**
+	 * injectFileRepository
+	 *
+	 * @param Tx_G40cloudfile_Domain_Repository_FileRepository $fileRepository
+	 * @return void
+	 */
+	public function injectFileRepository(Tx_G40cloudfile_Domain_Repository_FileRepository $fileRepository) {
+		        $this->fileRepository = $fileRepository;
+	}
 
-    /**
-     * injectBucketRepository
-     *
-     * @param Tx_G40cloudfile_Domain_Repository_BucketRepository $bucketRepository
-     * @return void
-     */
-    public function injectBucketRepository(Tx_G40cloudfile_Domain_Repository_BucketRepository $bucketRepository) {
-        $this->bucketRepository = $bucketRepository;
-    }
+	/**
+	 * injectBucketRepository
+	 *
+	 * @param Tx_G40cloudfile_Domain_Repository_BucketRepository $bucketRepository
+	 * @return void
+	 */
+	public function injectBucketRepository(Tx_G40cloudfile_Domain_Repository_BucketRepository $bucketRepository) {
+		        $this->bucketRepository = $bucketRepository;
+	}
 
 	/**
 	 * action list
@@ -75,7 +75,8 @@ class Tx_G40cloudfile_Controller_FileController extends Tx_Extbase_MVC_Controlle
 	public function listAction() {
 		$files = $this->fileRepository->findAll();
 		$this->view->assign('files', $files);
-        $this->view->assign('buckets', $this->bucketRepository->findByEvent(2));
+        $buckets = $this->bucketRepository->findAll();
+        $this->view->assign('buckets',$buckets);
 	}
 
 	/**
@@ -87,8 +88,6 @@ class Tx_G40cloudfile_Controller_FileController extends Tx_Extbase_MVC_Controlle
 	public function showAction(Tx_G40cloudfile_Domain_Model_File $file) {
 		$this->view->assign('file', $file);
 	}
-
-
 
 }
 ?>

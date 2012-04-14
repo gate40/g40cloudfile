@@ -55,8 +55,8 @@ overwriteSettings:
     Private:
       Language:
         #locallang.xml: merge
-      Templates:
-        List.html: keep
+      Templates: keep
+        # File: keep
 
   ext_icon.gif: keep
 

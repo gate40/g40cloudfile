@@ -7,11 +7,13 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 	$_EXTKEY,
 	'Cloudfile',
 	array(
+		'Category' => 'list',
 		'File' => 'list, show',
 		
 	),
 	// non-cacheable actions
 	array(
+		'Category' => '',
 		'File' => '',
 		
 	)

@@ -6,13 +6,6 @@
 	</meta>
 	<data type="array">
 		<languageKey index="default" type="array">
-			<label index="tx_g40cloudfile_domain_model_event">Event</label>
-			<label index="tx_g40cloudfile_domain_model_event.name">Name</label>
-			<label index="tx_g40cloudfile_domain_model_event.project_nr">Project Nr</label>
-			<label index="tx_g40cloudfile_domain_model_event.description">Description</label>
-			<label index="tx_g40cloudfile_domain_model_event.buckets">Buckets</label>
-			<label index="tx_g40cloudfile_domain_model_event.categories">Categories</label>
-
 			<label index="tx_g40cloudfile_domain_model_category">Category</label>
 			<label index="tx_g40cloudfile_domain_model_category.name">Name</label>
 			<label index="tx_g40cloudfile_domain_model_category.sort">Sort</label>

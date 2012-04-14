@@ -7,31 +7,31 @@
 .tx-g40cloudfile .counter span.digits {
     font-weight: bold;
 }
-.tx-g40cloudfile .g40cloudfile-list-table {
+.tx-g40cloudfile .g40cloudfile-table {
     width: 100%;
     border-collapse: collapse;
 }
-.tx-g40cloudfile .g40cloudfile-list-table th {
+.tx-g40cloudfile .g40cloudfile-table th {
     background-color: #e5e5e5;
     border: 0.091em solid #FFFFFF;
     color: #000000;
     padding: 0.182em 0.364em;
 }
-.tx-g40cloudfile .g40cloudfile-list-table td {
+.tx-g40cloudfile .g40cloudfile-table td {
     border: 0.091em solid #FFFFFF;
     color: #000000;
     padding: 0.182em 0.364em;
 }
-.tx-g40cloudfile .g40cloudfile-list-table .odd {
+.tx-g40cloudfile .g40cloudfile-table .odd {
     background-color: #FFFFFF;
 }
-.tx-g40cloudfile .g40cloudfile-list-table .even {
+.tx-g40cloudfile .g40cloudfile-table .even {
     background-color: #E9E9E9;
 }
-.tx-g40cloudfile .g40cloudfile-list-table .vehicleImage {
+.tx-g40cloudfile .g40cloudfile-table .vehicleImage {
     margin: 0.5em 4px;
 }
-.tx-g40cloudfile .g40cloudfile-list-table .photoIcon {
+.tx-g40cloudfile .g40cloudfile-table .photoIcon {
     margin-left: 0.5em;
 }
 .tx-g40cloudfile .detailData {

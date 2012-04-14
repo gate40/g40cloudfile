@@ -31,33 +31,33 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_G40cloudfile_Domain_Model_TextFields extends Tx_Extbase_DomainObject_AbstractValueObject {
+class Tx_G40cloudfile_Controller_CategoryController extends Tx_Extbase_MVC_Controller_ActionController {
 
 	/**
-	 * text
+	 * categoryRepository
 	 *
-	 * @var string
-	 * @validate NotEmpty
+	 * @var Tx_G40cloudfile_Domain_Repository_CategoryRepository
 	 */
-	protected $text;
+	protected $categoryRepository;
 
 	/**
-	 * Returns the text
+	 * injectCategoryRepository
 	 *
-	 * @return string $text
+	 * @param Tx_G40cloudfile_Domain_Repository_CategoryRepository $categoryRepository
+	 * @return void
 	 */
-	public function getText() {
-		return $this->text;
+	public function injectCategoryRepository(Tx_G40cloudfile_Domain_Repository_CategoryRepository $categoryRepository) {
+		$this->categoryRepository = $categoryRepository;
 	}
 
 	/**
-	 * Sets the text
+	 * action list
 	 *
-	 * @param string $text
 	 * @return void
 	 */
-	public function setText($text) {
-		$this->text = $text;
+	public function listAction() {
+		$categories = $this->categoryRepository->findAll();
+		$this->view->assign('categories', $categories);
 	}
 
 }

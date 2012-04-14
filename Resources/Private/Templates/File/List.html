@@ -12,39 +12,48 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="main">
-<h1>Listing for File</h1>
+<h1>Listing for Files</h1>
 
 <f:flashMessages />
+{files.0.filename}<br />
+{files.0.fileCategory.name}<br />
+{files.0.fileBucket.name}<br />
 
-<table  class="g40cloudfile-list-table" >
+<table  class="g40cloudfile-table" >
 	<tr>
         <th><f:translate key="tx_g40cloudfile_domain_model_file.description" /></th>
 		<th><f:translate key="tx_g40cloudfile_domain_model_file.filename" /></th>
-
-		<th><f:translate key="tx_g40cloudfile_domain_model_file.text1" /></th>
-		<th><f:translate key="tx_g40cloudfile_domain_model_file.text2" /></th>
+		<th>Category</th>
+        <th><f:translate key="tx_g40cloudfile_domain_model_file.text1" /></th>
+		<th>{files.0.fileCategory.label1}</th>
         <f:for each="{buckets}" as="bucket">
             <th>{bucket.description}</th>
         </f:for>
 	</tr>
 
-	<f:for each="{files}" as="file">
+	<f:for each="{files}" as="file" key="key">
         <f:cycle values="{0: 'odd', 1: 'even'}" as="zebraClass">
             <tr>
                 <td class="{zebraClass}"> {file.description}</td>
                 <td class="{zebraClass}"> {file.filename}</td>
-
+                <td class="{zebraClass}"> {file.fileCategory.name}</td>
                 <td class="{zebraClass}"> {file.text1}</td>
-                <td class="{zebraClass}"> {file.text2}</td>
+                <td class="{zebraClass}"> {file.text2}/{key}</td>
 
                 <f:for each="{buckets}" as="bucket">
-                        <td class="{zebraClass}">
-                            <f:link.external uri="http://{bucket.name}.s3.amazonaws.com/{file.filename}" target="_self">X</f:link.external>
-                        </td>
-
+                    <td class="{zebraClass}">
+                        <f:if condition="{file.fileBucket}">
+                            <f:then>
+                                <f:link.external uri="http://{bucket.name}.s3.amazonaws.com/{file.filename}" target="_self">
+                                    <f:image src="EXT:g40cloudfile/Resources/Public/Icons/drive_disk.png" alt="download" />
+                                </f:link.external>
+                            </f:then>
+                            <f:else>
+                                no link
+                            </f:else>
+                        </f:if>
+                    </td>
                 </f:for>
-
-
             </tr>
         </f:cycle>
 	</f:for>

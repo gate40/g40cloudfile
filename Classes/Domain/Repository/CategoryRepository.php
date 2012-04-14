@@ -31,34 +31,7 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_G40cloudfile_Domain_Model_TextLabel extends Tx_Extbase_DomainObject_AbstractValueObject {
-
-	/**
-	 * textLabel
-	 *
-	 * @var string
-	 * @validate NotEmpty
-	 */
-	protected $textLabel;
-
-	/**
-	 * Returns the textLabel
-	 *
-	 * @return string $textLabel
-	 */
-	public function getTextLabel() {
-		return $this->textLabel;
-	}
-
-	/**
-	 * Sets the textLabel
-	 *
-	 * @param string $textLabel
-	 * @return void
-	 */
-	public function setTextLabel($textLabel) {
-		$this->textLabel = $textLabel;
-	}
+class Tx_G40cloudfile_Domain_Repository_CategoryRepository extends Tx_Extbase_Persistence_Repository {
 
 }
 ?>

@@ -28,5 +28,5 @@ plugin.tx_g40cloudfile._CSS_DEFAULT_STYLE (
 		vertical-align:top;
 	}
 )
-
-page.includeCSS.tx_wineinsatz = EXT:g40cloudfile/Resources/Public/CSS/tx_g40cloudfile.css
+## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
+page.includeCSS.g40cloudfile = EXT:g40cloudfile/Resources/Public/CSS/tx_g40cloudfile.css
