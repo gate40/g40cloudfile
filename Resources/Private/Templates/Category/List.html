@@ -16,24 +16,58 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
 <f:flashMessages />
 
-<table  class="g40cloudfile-table"  >
-	<tr>
-		<th><f:translate key="tx_g40cloudfile_domain_model_category.name" /></th>
-		<th><f:translate key="tx_g40cloudfile_domain_model_category.sort" /></th>
-		<th><f:translate key="tx_g40cloudfile_domain_model_category.label1" /></th>
-		<th><f:translate key="tx_g40cloudfile_domain_model_category.label2" /></th>
-		<th><f:translate key="tx_g40cloudfile_domain_model_category.label3" /></th>
-	</tr>
+<f:for each="{categories}" as="category">
+    <f:if condition="{category.categoryFile}">
+        <h1>Category "{category.name}"</h1>
 
-	<f:for each="{categories}" as="category">
-		<tr>
-			<td><f:link.action action="show" arguments="{category : category}"> {category.name}</f:link.action></td>
-			<td>{category.sort}</td>
-			<td>{category.label1}</td>
-			<td>{category.label2}</td>
-			<td>{category.label3}</td>
-		</tr>
-	</f:for>
-</table>
+        <table  class="g40cloudfile-table"  >
+            <tr>
+                <th><f:translate key="tx_g40cloudfile_domain_model_file.description" /></th>
+                <f:if condition="{category.label1}">
+                    <th>{category.label1}</th>
+                </f:if>
+                <f:if condition="{category.label2}">
+                    <th>{category.label2}</th>
+                </f:if>
+                <f:if condition="{category.label3}">
+                    <th>{category.label3}</th>
+                </f:if>
+                <f:for each="{buckets}" as="bucket">
+                    <th>{bucket.description}</th>
+                </f:for>
+            </tr>
+
+            <f:for each="{category.categoryFile}" as="file" key="fileKey" >
+                <f:cycle values="{0: 'odd', 1: 'even'}" as="zebraClass">
+                    <tr>
+                        <td class="{zebraClass}">{file.description}</td>
+                        <f:if condition="{category.label1}">
+                            <td class="{zebraClass}">{file.text1}</td>
+                        </f:if>
+                        <f:if condition="{category.label2}">
+                            <td class="{zebraClass}">{file.text2}</td>
+                        </f:if>
+                        <f:if condition="{category.label3}">
+                            <td class="{zebraClass}">{file.text3}</td>
+                        </f:if>
+                        <f:for each="{buckets}" as="bucket" key="x">
+                            <td class="{zebraClass}">
+                                <f:for each="{file.fileBucket}" as="fileBucket" key="y" iteration="i">
+                                    <f:if condition="{0: bucket.name} == {0: fileBucket.name}">
+                                        <f:then>
+                                            <f:link.external uri="http://{bucket.name}.s3.amazonaws.com/{file.filename}" target="_self">
+                                                <f:image src="EXT:g40cloudfile/Resources/Public/Icons/drive_disk.png" alt="download" />
+                                            </f:link.external>
+                                        </f:then>
+                                    </f:if>
+                                </f:for>
+                            </td>
+                        </f:for>
+                    </tr>
+                </f:cycle>
+            </f:for>
+        </table>
+    </f:if>
+</f:for>
 
 </f:section>
