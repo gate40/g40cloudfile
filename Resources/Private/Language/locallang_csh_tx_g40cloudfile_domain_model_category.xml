@@ -12,6 +12,7 @@
 			<label index="label1.description">label1</label>
 			<label index="label2.description">label2</label>
 			<label index="label3.description">label3</label>
+			<label index="category_file.description">categoryFile</label>
 		</languageKey>
 	</data>
 </T3locallang>

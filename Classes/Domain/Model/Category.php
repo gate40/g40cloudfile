@@ -70,6 +70,13 @@ class Tx_G40cloudfile_Domain_Model_Category extends Tx_Extbase_DomainObject_Abst
 	protected $label3;
 
 	/**
+	 * categoryFile
+	 *
+	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_G40cloudfile_Domain_Model_File>
+	 */
+	protected $categoryFile;
+
+	/**
 	 * Returns the name
 	 *
 	 * @return string $name
@@ -162,6 +169,69 @@ class Tx_G40cloudfile_Domain_Model_Category extends Tx_Extbase_DomainObject_Abst
 	 */
 	public function setLabel3($label3) {
 		$this->label3 = $label3;
+	}
+
+	/**
+	 * __construct
+	 *
+	 * @return void
+	 */
+	public function __construct() {
+		//Do not remove the next line: It would break the functionality
+		$this->initStorageObjects();
+	}
+
+	/**
+	 * Initializes all Tx_Extbase_Persistence_ObjectStorage properties.
+	 *
+	 * @return void
+	 */
+	protected function initStorageObjects() {
+		/**
+		 * Do not modify this method!
+		 * It will be rewritten on each save in the extension builder
+		 * You may modify the constructor of this class instead
+		 */
+		$this->categoryFile = new Tx_Extbase_Persistence_ObjectStorage();
+	}
+
+	/**
+	 * Adds a File
+	 *
+	 * @param Tx_G40cloudfile_Domain_Model_File $categoryFile
+	 * @return void
+	 */
+	public function addCategoryFile(Tx_G40cloudfile_Domain_Model_File $categoryFile) {
+		$this->categoryFile->attach($categoryFile);
+	}
+
+	/**
+	 * Removes a File
+	 *
+	 * @param Tx_G40cloudfile_Domain_Model_File $categoryFileToRemove The File to be removed
+	 * @return void
+	 */
+	public function removeCategoryFile(Tx_G40cloudfile_Domain_Model_File $categoryFileToRemove) {
+		$this->categoryFile->detach($categoryFileToRemove);
+	}
+
+	/**
+	 * Returns the categoryFile
+	 *
+	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_G40cloudfile_Domain_Model_File> $categoryFile
+	 */
+	public function getCategoryFile() {
+		return $this->categoryFile;
+	}
+
+	/**
+	 * Sets the categoryFile
+	 *
+	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_G40cloudfile_Domain_Model_File> $categoryFile
+	 * @return void
+	 */
+	public function setCategoryFile(Tx_Extbase_Persistence_ObjectStorage $categoryFile) {
+		$this->categoryFile = $categoryFile;
 	}
 
 }

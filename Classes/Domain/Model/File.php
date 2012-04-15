@@ -70,13 +70,6 @@ class Tx_G40cloudfile_Domain_Model_File extends Tx_Extbase_DomainObject_Abstract
 	protected $text3;
 
 	/**
-	 * fileCategory
-	 *
-	 * @var Tx_G40cloudfile_Domain_Model_Category
-	 */
-	protected $fileCategory;
-
-	/**
 	 * fileBucket
 	 *
 	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_G40cloudfile_Domain_Model_Bucket>
@@ -200,25 +193,6 @@ class Tx_G40cloudfile_Domain_Model_File extends Tx_Extbase_DomainObject_Abstract
 	 */
 	public function setText3($text3) {
 		$this->text3 = $text3;
-	}
-
-	/**
-	 * Returns the fileCategory
-	 *
-	 * @return Tx_G40cloudfile_Domain_Model_Category $fileCategory
-	 */
-	public function getFileCategory() {
-		return $this->fileCategory;
-	}
-
-	/**
-	 * Sets the fileCategory
-	 *
-	 * @param Tx_G40cloudfile_Domain_Model_Category $fileCategory
-	 * @return void
-	 */
-	public function setFileCategory(Tx_G40cloudfile_Domain_Model_Category $fileCategory) {
-		$this->fileCategory = $fileCategory;
 	}
 
 	/**

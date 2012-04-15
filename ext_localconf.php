@@ -8,7 +8,7 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 	'Cloudfile',
 	array(
 		'Category' => 'list',
-		'File' => 'list, show',
+		'File' => 'list',
 		
 	),
 	// non-cacheable actions

@@ -1,3 +1,12 @@
+
+.tx-g40cloudfile h2 {
+    color: #333;
+    display: block;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 9px 0 9px 0;
+    font-family: Arial,Helvetica,sans-serif;
+}
 .tx-g40cloudfile a {
     outline: 0 none;
 }
@@ -13,21 +22,34 @@
 }
 .tx-g40cloudfile .g40cloudfile-table th {
     background-color: #e5e5e5;
-    border: 0.091em solid #FFFFFF;
     color: #000000;
     padding: 0.182em 0.364em;
+    border: 1px solid #E3E3E3;
+    border-bottom: 1px solid black;
+}
+.tx-g40cloudfile .g40cloudfile-table th.bucket{
+    text-align: center;
 }
 .tx-g40cloudfile .g40cloudfile-table td {
-    border: 0.091em solid #FFFFFF;
+    border: 1px solid #E3E3E3;
     color: #000000;
-    padding: 0.182em 0.364em;
+    padding: 5px 5px 5px 3px;
+}
+.tx-g40cloudfile .g40cloudfile-table td.bucket {
+    width: 10%;
+    background-color: #F1F1F1;
 }
 .tx-g40cloudfile .g40cloudfile-table .odd {
     background-color: #FFFFFF;
 }
 .tx-g40cloudfile .g40cloudfile-table .even {
-    background-color: #E9E9E9;
+    background-color: #FFFFFF;
 }
+
+.tx-g40cloudfile .g40cloudfile-table .bucket img {
+    margin-left: 40%;
+}
+
 .tx-g40cloudfile .g40cloudfile-table .vehicleImage {
     margin: 0.5em 4px;
 }

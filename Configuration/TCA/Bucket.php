@@ -111,11 +111,6 @@ $TCA['tx_g40cloudfile_domain_model_bucket'] = array(
 				'eval' => 'trim'
 			),
 		),
-		'event' => array(
-			'config' => array(
-				'type' => 'passthrough',
-			),
-		),
 	),
 );
 

@@ -33,5 +33,29 @@
  */
 class Tx_G40cloudfile_Domain_Repository_CategoryRepository extends Tx_Extbase_Persistence_Repository {
 
+    public function findAll() {
+        $query = $this->createQuery();
+        $query->setOrderings(
+            array(
+                'sort' => Tx_Extbase_Persistence_QueryInterface::ORDER_ASCENDING
+            )
+        );
+        $result = $query->execute();
+        return $result;
+    }
+
+    /**
+     * Sort by Cols
+     * @param array $col col
+     * @return object
+     * */
+    public function sortByCol($col) {
+        $query = $this->createQuery();
+        $query->getQuerySettings()->setRespectSysLanguage(FALSE);
+        //Sortiert alle angegebenen Spalten
+        $query->matching()->setOrderings($col);
+        $result = $query->execute();
+        return $result;
+    }
 }
 ?>

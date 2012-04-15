@@ -140,5 +140,63 @@ class Tx_G40cloudfile_Domain_Model_CategoryTest extends Tx_Extbase_Tests_Unit_Ba
 		);
 	}
 	
+	/**
+	 * @test
+	 */
+	public function getCategoryFileReturnsInitialValueForObjectStorageContainingTx_G40cloudfile_Domain_Model_File() { 
+		$newObjectStorage = new Tx_Extbase_Persistence_ObjectStorage();
+		$this->assertEquals(
+			$newObjectStorage,
+			$this->fixture->getCategoryFile()
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function setCategoryFileForObjectStorageContainingTx_G40cloudfile_Domain_Model_FileSetsCategoryFile() { 
+		$categoryFile = new Tx_G40cloudfile_Domain_Model_File();
+		$objectStorageHoldingExactlyOneCategoryFile = new Tx_Extbase_Persistence_ObjectStorage();
+		$objectStorageHoldingExactlyOneCategoryFile->attach($categoryFile);
+		$this->fixture->setCategoryFile($objectStorageHoldingExactlyOneCategoryFile);
+
+		$this->assertSame(
+			$objectStorageHoldingExactlyOneCategoryFile,
+			$this->fixture->getCategoryFile()
+		);
+	}
+	
+	/**
+	 * @test
+	 */
+	public function addCategoryFileToObjectStorageHoldingCategoryFile() {
+		$categoryFile = new Tx_G40cloudfile_Domain_Model_File();
+		$objectStorageHoldingExactlyOneCategoryFile = new Tx_Extbase_Persistence_ObjectStorage();
+		$objectStorageHoldingExactlyOneCategoryFile->attach($categoryFile);
+		$this->fixture->addCategoryFile($categoryFile);
+
+		$this->assertEquals(
+			$objectStorageHoldingExactlyOneCategoryFile,
+			$this->fixture->getCategoryFile()
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function removeCategoryFileFromObjectStorageHoldingCategoryFile() {
+		$categoryFile = new Tx_G40cloudfile_Domain_Model_File();
+		$localObjectStorage = new Tx_Extbase_Persistence_ObjectStorage();
+		$localObjectStorage->attach($categoryFile);
+		$localObjectStorage->detach($categoryFile);
+		$this->fixture->addCategoryFile($categoryFile);
+		$this->fixture->removeCategoryFile($categoryFile);
+
+		$this->assertEquals(
+			$localObjectStorage,
+			$this->fixture->getCategoryFile()
+		);
+	}
+	
 }
 ?>

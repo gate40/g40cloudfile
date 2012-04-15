@@ -40,6 +40,13 @@ class Tx_G40cloudfile_Controller_CategoryController extends Tx_Extbase_MVC_Contr
 	 */
 	protected $categoryRepository;
 
+    /**
+     * bucketRepository
+     *
+     * @var Tx_G40cloudfile_Domain_Repository_BucketRepository
+     */
+    protected $bucketRepository;
+
 	/**
 	 * injectCategoryRepository
 	 *
@@ -50,15 +57,42 @@ class Tx_G40cloudfile_Controller_CategoryController extends Tx_Extbase_MVC_Contr
 		$this->categoryRepository = $categoryRepository;
 	}
 
+    /**
+     * injectBucketRepository
+     *
+     * @param Tx_G40cloudfile_Domain_Repository_BucketRepository $bucketRepository
+     * @return void
+     */
+    public function injectBucketRepository(Tx_G40cloudfile_Domain_Repository_BucketRepository $bucketRepository) {
+        $this->bucketRepository = $bucketRepository;
+    }
+
 	/**
 	 * action list
 	 *
 	 * @return void
 	 */
 	public function listAction() {
+/*
+        $arguments = $this->request->getArguments();
+        $argument = $arguments['myvalue'];
+        $order = explode(':',$arguments['order']);
+        if($order[1] == 'ASC') {
+            $ordering =	array($order[0].'' => Tx_Extbase_Persistence_QueryInterface::ORDER_ASCENDING);
+        } else {
+            $ordering =	array($order[0].'' => Tx_Extbase_Persistence_QueryInterface::ORDER_DESCENDING);
+        }
+
+        $myval	=	$this->categoryRepository->sortByCol($ordering)
+*/
 		$categories = $this->categoryRepository->findAll();
 		$this->view->assign('categories', $categories);
+        $buckets = $this->bucketRepository->findAll();
+        $this->view->assign('buckets',$buckets);
 	}
+
+
+
 
 }
 ?>

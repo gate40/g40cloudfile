@@ -15,12 +15,12 @@
                                 <type>select</type>
                                 <items>
                                     <numIndex index="0">
-                                        <numIndex index="0">Listenansicht Files</numIndex>
-                                        <numIndex index="1">File->list</numIndex>
-                                    </numIndex>
-                                    <numIndex index="1">
                                         <numIndex index="0">Listenansicht Kategorien</numIndex>
                                         <numIndex index="1">Category->list</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">Listenansicht Fies</numIndex>
+                                        <numIndex index="1">File->list</numIndex>
                                     </numIndex>
                                 </items>
                             </config>

@@ -138,29 +138,6 @@ class Tx_G40cloudfile_Domain_Model_FileTest extends Tx_Extbase_Tests_Unit_BaseTe
 	/**
 	 * @test
 	 */
-	public function getFileCategoryReturnsInitialValueForTx_G40cloudfile_Domain_Model_Category() { 
-		$this->assertEquals(
-			NULL,
-			$this->fixture->getFileCategory()
-		);
-	}
-
-	/**
-	 * @test
-	 */
-	public function setFileCategoryForTx_G40cloudfile_Domain_Model_CategorySetsFileCategory() { 
-		$dummyObject = new Tx_G40cloudfile_Domain_Model_Category();
-		$this->fixture->setFileCategory($dummyObject);
-
-		$this->assertSame(
-			$dummyObject,
-			$this->fixture->getFileCategory()
-		);
-	}
-	
-	/**
-	 * @test
-	 */
 	public function getFileBucketReturnsInitialValueForObjectStorageContainingTx_G40cloudfile_Domain_Model_Bucket() { 
 		$newObjectStorage = new Tx_Extbase_Persistence_ObjectStorage();
 		$this->assertEquals(

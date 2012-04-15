@@ -12,13 +12,11 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="main">
-<h1>Listing for Category</h1>
 
-<f:flashMessages />
 
 <f:for each="{categories}" as="category">
     <f:if condition="{category.categoryFile}">
-        <h1>Category "{category.name}"</h1>
+        <h2>Category "{category.name}"</h2>
 
         <table  class="g40cloudfile-table"  >
             <tr>
@@ -33,7 +31,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
                     <th>{category.label3}</th>
                 </f:if>
                 <f:for each="{buckets}" as="bucket">
-                    <th>{bucket.description}</th>
+                    <th class="bucket">{bucket.description}</th>
                 </f:for>
             </tr>
 
@@ -51,7 +49,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
                             <td class="{zebraClass}">{file.text3}</td>
                         </f:if>
                         <f:for each="{buckets}" as="bucket" key="x">
-                            <td class="{zebraClass}">
+                            <td class="{zebraClass} bucket">
                                 <f:for each="{file.fileBucket}" as="fileBucket" key="y" iteration="i">
                                     <f:if condition="{0: bucket.name} == {0: fileBucket.name}">
                                         <f:then>

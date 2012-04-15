@@ -12,6 +12,7 @@
 			<label index="tx_g40cloudfile_domain_model_category.label1">Label1</label>
 			<label index="tx_g40cloudfile_domain_model_category.label2">Label2</label>
 			<label index="tx_g40cloudfile_domain_model_category.label3">Label3</label>
+			<label index="tx_g40cloudfile_domain_model_category.category_file">Files</label>
 
 			<label index="tx_g40cloudfile_domain_model_bucket">Bucket</label>
 			<label index="tx_g40cloudfile_domain_model_bucket.name">Name</label>
@@ -23,8 +24,7 @@
 			<label index="tx_g40cloudfile_domain_model_file.text1">Text1</label>
 			<label index="tx_g40cloudfile_domain_model_file.text2">Text2</label>
 			<label index="tx_g40cloudfile_domain_model_file.text3">Text3</label>
-			<label index="tx_g40cloudfile_domain_model_file.file_category">File Category</label>
-			<label index="tx_g40cloudfile_domain_model_file.file_bucket">File Bucket</label>
+			<label index="tx_g40cloudfile_domain_model_file.file_bucket">Buckets</label>
 
 		</languageKey>
 	</data>

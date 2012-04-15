@@ -6,10 +6,10 @@ if (!defined ('TYPO3_MODE')) {
 $TCA['tx_g40cloudfile_domain_model_category'] = array(
 	'ctrl' => $TCA['tx_g40cloudfile_domain_model_category']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, sort, label1, label2, label3',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, sort, label1, label2, label3, category_file',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, name, sort, label1, label2, label3,--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.access,starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, name, sort, label1, label2, label3, category_file,--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.access,starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -138,9 +138,21 @@ $TCA['tx_g40cloudfile_domain_model_category'] = array(
 				'eval' => 'trim'
 			),
 		),
-		'event' => array(
+		'category_file' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:g40cloudfile/Resources/Private/Language/locallang_db.xml:tx_g40cloudfile_domain_model_category.category_file',
 			'config' => array(
-				'type' => 'passthrough',
+				'type' => 'inline',
+				'foreign_table' => 'tx_g40cloudfile_domain_model_file',
+				'foreign_field' => 'category',
+				'maxitems'      => 9999,
+				'appearance' => array(
+					'collapse' => 0,
+					'levelLinksPosition' => 'top',
+					'showSynchronizationLink' => 1,
+					'showPossibleLocalizationRecords' => 1,
+					'showAllLocalizationLink' => 1
+				),
 			),
 		),
 	),

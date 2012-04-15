@@ -11,6 +11,7 @@ CREATE TABLE tx_g40cloudfile_domain_model_category (
 	label1 varchar(255) DEFAULT '' NOT NULL,
 	label2 varchar(255) DEFAULT '' NOT NULL,
 	label3 varchar(255) DEFAULT '' NOT NULL,
+	category_file int(11) unsigned DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -91,12 +92,13 @@ CREATE TABLE tx_g40cloudfile_domain_model_file (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
 
+	category int(11) unsigned DEFAULT '0' NOT NULL,
+
 	filename varchar(255) DEFAULT '' NOT NULL,
 	description varchar(255) DEFAULT '' NOT NULL,
 	text1 varchar(255) DEFAULT '' NOT NULL,
 	text2 varchar(255) DEFAULT '' NOT NULL,
 	text3 varchar(255) DEFAULT '' NOT NULL,
-	file_category int(11) unsigned DEFAULT '0',
 	file_bucket int(11) unsigned DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
@@ -126,6 +128,15 @@ CREATE TABLE tx_g40cloudfile_domain_model_file (
 	KEY parent (pid),
 	KEY t3ver_oid (t3ver_oid,t3ver_wsid),
 	KEY language (l10n_parent,sys_language_uid)
+
+);
+
+#
+# Table structure for table 'tx_g40cloudfile_domain_model_file'
+#
+CREATE TABLE tx_g40cloudfile_domain_model_file (
+
+	category  int(11) unsigned DEFAULT '0' NOT NULL,
 
 );
 
