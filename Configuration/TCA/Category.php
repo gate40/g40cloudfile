@@ -145,6 +145,7 @@ $TCA['tx_g40cloudfile_domain_model_category'] = array(
 				'type' => 'inline',
 				'foreign_table' => 'tx_g40cloudfile_domain_model_file',
 				'foreign_field' => 'category',
+                'foreign_sortby' => 'sorting',
 				'maxitems'      => 9999,
 				'appearance' => array(
 					'collapse' => 0,
