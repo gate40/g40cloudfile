@@ -29,4 +29,10 @@ plugin.tx_g40cloudfile._CSS_DEFAULT_STYLE (
 	}
 )
 ## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
+plugin.tx_g40cloudfile {
+	settings {
+		downloadProtocol = {$plugin.tx_g40cloudfile.settings.downloadProtocol}
+		downloadUrlPart = {$plugin.tx_g40cloudfile.settings.downloadUrlPart}
+	}
+}
 page.includeCSS.g40cloudfile = EXT:g40cloudfile/Resources/Public/CSS/tx_g40cloudfile.css
