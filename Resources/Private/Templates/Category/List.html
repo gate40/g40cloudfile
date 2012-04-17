@@ -53,7 +53,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
                                 <f:for each="{file.fileBucket}" as="fileBucket" key="y" iteration="i">
                                     <f:if condition="{0: bucket.name} == {0: fileBucket.name}">
                                         <f:then>
-                                            <f:link.external uri="http://{bucket.name}.s3.amazonaws.com/{file.filename}" target="_self">
+                                            <f:link.external uri="{settings.downloadProtocol}://{bucket.name}.{settings.downloadUrlPart}/{file.filename}" target="_self">
                                                 <f:image src="EXT:g40cloudfile/Resources/Public/Icons/drive_disk.png" alt="download" />
                                             </f:link.external>
                                         </f:then>
