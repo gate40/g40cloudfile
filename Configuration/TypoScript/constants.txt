@@ -13,3 +13,10 @@ plugin.tx_g40cloudfile {
 	}
 }
 ## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
+plugin.tx_g40cloudfile {
+	settings {
+		# cat=plugin.tx_g40cloudfile/file; type=string; label=Protocol of Download (no slashes and colon): eg. htp, https
+		downloadProtocol = http
+		# cat=plugin.tx_g40cloudfile/file; type=string; label=AmazonS3 Url-Part of Download: eg. s3.amazonaws.com as Part of bucket.s3.amazonaws.com/abc.zip
+        downloadUrlPart = s3.amazonaws.com
+}
