@@ -76,7 +76,7 @@ t3lib_extMgm::allowTableOnStandardPages('tx_g40cloudfile_domain_model_file');
 $TCA['tx_g40cloudfile_domain_model_file'] = array(
     'ctrl' => array(
         'title'	=> 'LLL:EXT:g40cloudfile/Resources/Private/Language/locallang_db.xml:tx_g40cloudfile_domain_model_file',
-        'label' => 'filename',
+        'label' => 'description',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
