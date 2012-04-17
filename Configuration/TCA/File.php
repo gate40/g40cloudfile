@@ -144,6 +144,7 @@ $TCA['tx_g40cloudfile_domain_model_file'] = array(
 			'config' => array(
 				'type' => 'select',
 				'foreign_table' => 'tx_g40cloudfile_domain_model_bucket',
+                'foreign_table_where' => 'AND tx_g40cloudfile_domain_model_bucket.hidden=0',
 				'MM' => 'tx_g40cloudfile_file_bucket_mm',
 				'size' => 10,
 				'autoSizeMax' => 30,
