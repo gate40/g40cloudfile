@@ -12,7 +12,7 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'Cloud File Manager',
-	'description' => '',
+	'description' => 'Lists Files stored in Buckets on Amazon S3 Simple Storage Service in a Table View',
 	'category' => 'plugin',
 	'author' => 'Daniel Frei',
 	'author_email' => 'df@gate40.net',
