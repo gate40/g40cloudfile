@@ -1,44 +1,35 @@
-.tx-g40cloudfile h2 {
-    color: #333;
-    display: block;
-    font-size: 14px;
-    line-height: 17px;
-    margin: 9px 0 9px 0;
-    font-family: Arial,Helvetica,sans-serif;
-}
-.tx-g40cloudfile a {
-    outline: 0 none;
-}
-.tx-g40cloudfile .g40cloudfile-table {
+.tx-g40cloudfile table.g40cloudfile-table {
     width: 100%;
     border-collapse: collapse;
 }
-.tx-g40cloudfile .g40cloudfile-table th {
-    background-color: #e5e5e5;
+.tx-g40cloudfile table.g40cloudfile-table th {
     color: #000000;
-    padding: 0.182em 0.364em;
+    background-color: #e5e5e5;
+    padding: 2px 5px;
     border: 1px solid #E3E3E3;
     border-bottom: 1px solid black;
 }
-.tx-g40cloudfile .g40cloudfile-table th.bucket{
+.tx-g40cloudfile table.g40cloudfile-table th.bucket{
     text-align: center;
 }
-.tx-g40cloudfile .g40cloudfile-table td {
-    border: 1px solid #E3E3E3;
+.tx-g40cloudfile table.g40cloudfile-table td {
     color: #000000;
+    border: 1px solid #E3E3E3;
     padding: 5px 5px 5px 3px;
 }
-.tx-g40cloudfile .g40cloudfile-table td.bucket {
-    width: 10%;
+.tx-g40cloudfile table.g40cloudfile-table td.bucket {
     background-color: #F1F1F1;
+    width: 10%;
 }
-.tx-g40cloudfile .g40cloudfile-table .odd {
-    background-color: #FFFFFF;
-}
-.tx-g40cloudfile .g40cloudfile-table .even {
-    background-color: #FFFFFF;
-}
-
-.tx-g40cloudfile .g40cloudfile-table .bucket img {
+.tx-g40cloudfile table.g40cloudfile-table td.bucket img {
     margin-left: 40%;
+}
+.tx-g40cloudfile table.g40cloudfile-table .odd {
+    background-color: #FFFFFF;
+}
+.tx-g40cloudfile table.g40cloudfile-table .even {
+    background-color: #FFFFFF;
+}
+.tx-g40cloudfile a {
+    outline: 0 none;
 }
