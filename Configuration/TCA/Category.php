@@ -102,15 +102,6 @@ $TCA['tx_g40cloudfile_domain_model_category'] = array(
 				'eval' => 'trim,required'
 			),
 		),
-		'sort' => array(
-			'exclude' => 0,
-			'label' => 'LLL:EXT:g40cloudfile/Resources/Private/Language/locallang_db.xml:tx_g40cloudfile_domain_model_category.sort',
-			'config' => array(
-				'type' => 'input',
-				'size' => 4,
-				'eval' => 'int'
-			),
-		),
 		'label1' => array(
 			'exclude' => 0,
 			'label' => 'LLL:EXT:g40cloudfile/Resources/Private/Language/locallang_db.xml:tx_g40cloudfile_domain_model_category.label1',

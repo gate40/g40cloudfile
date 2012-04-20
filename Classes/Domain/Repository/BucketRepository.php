@@ -33,5 +33,16 @@
  */
 class Tx_G40cloudfile_Domain_Repository_BucketRepository extends Tx_Extbase_Persistence_Repository {
 
+    public function findAll() {
+        $query = $this->createQuery();
+        $query->setOrderings(
+            array(
+                'sorting' => Tx_Extbase_Persistence_QueryInterface::ORDER_ASCENDING
+            )
+        );
+        $result = $query->execute();
+        return $result;
+    }
+
 }
 ?>

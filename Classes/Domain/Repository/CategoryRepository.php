@@ -37,7 +37,7 @@ class Tx_G40cloudfile_Domain_Repository_CategoryRepository extends Tx_Extbase_Pe
         $query = $this->createQuery();
         $query->setOrderings(
             array(
-                'sort' => Tx_Extbase_Persistence_QueryInterface::ORDER_ASCENDING
+                'sorting' => Tx_Extbase_Persistence_QueryInterface::ORDER_ASCENDING
             )
         );
         $result = $query->execute();

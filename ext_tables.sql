@@ -7,7 +7,6 @@ CREATE TABLE tx_g40cloudfile_domain_model_category (
 	pid int(11) DEFAULT '0' NOT NULL,
 
 	name varchar(255) DEFAULT '' NOT NULL,
-	sort int(11) DEFAULT '0' NOT NULL,
 	label1 varchar(255) DEFAULT '' NOT NULL,
 	label2 varchar(255) DEFAULT '' NOT NULL,
 	label3 varchar(255) DEFAULT '' NOT NULL,
@@ -20,6 +19,8 @@ CREATE TABLE tx_g40cloudfile_domain_model_category (
 	hidden tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	starttime int(11) unsigned DEFAULT '0' NOT NULL,
 	endtime int(11) unsigned DEFAULT '0' NOT NULL,
+
+	sorting int(11) unsigned DEFAULT '0' NOT NULL,
 
 	t3ver_oid int(11) DEFAULT '0' NOT NULL,
 	t3ver_id int(11) DEFAULT '0' NOT NULL,
@@ -61,6 +62,8 @@ CREATE TABLE tx_g40cloudfile_domain_model_bucket (
 	hidden tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	starttime int(11) unsigned DEFAULT '0' NOT NULL,
 	endtime int(11) unsigned DEFAULT '0' NOT NULL,
+
+	sorting int(11) unsigned DEFAULT '0' NOT NULL,
 
 	t3ver_oid int(11) DEFAULT '0' NOT NULL,
 	t3ver_id int(11) DEFAULT '0' NOT NULL,
