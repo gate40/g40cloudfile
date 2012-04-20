@@ -53,12 +53,9 @@ plugin.tx_g40cloudfile {
         }
 
         .tx-g40cloudfile table.g40cloudfile-table td.bucket {
+            text-align: center;
             background-color: #F1F1F1;
             width: 1%;
-        }
-
-        .tx-g40cloudfile table.g40cloudfile-table td.bucket img {
-            margin-left: 40%;
         }
 
         .tx-g40cloudfile table.g40cloudfile-table .odd {
