@@ -1,0 +1,47 @@
+input.f3-form-error {
+    background-color:#FF9F9F;
+    border: 1px #FF0000 solid;
+}
+
+.tx-g40cloudfile table.g40cloudfile-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tx-g40cloudfile table.g40cloudfile-table th {
+    color: #000000;
+    font-weight: bold;
+    text-align: left;
+    background-color: #e5e5e5;
+    padding: 5px 5px 5px 3px;
+    border: 1px solid #E3E3E3;
+    border-bottom: 1px solid black;
+}
+
+.tx-g40cloudfile table.g40cloudfile-table th.bucket{
+    text-align: center;
+}
+
+.tx-g40cloudfile table.g40cloudfile-table td {
+    color: #000000;
+    border: 1px solid #E3E3E3;
+    padding: 5px 5px 5px 3px;
+}
+
+.tx-g40cloudfile table.g40cloudfile-table td.bucket {
+    text-align: center;
+    background-color: #F1F1F1;
+    width: 1%;
+}
+
+.tx-g40cloudfile table.g40cloudfile-table .odd {
+    background-color: #FFFFFF;
+}
+
+.tx-g40cloudfile table.g40cloudfile-table .even {
+    background-color: #FFFFFF;
+}
+
+.tx-g40cloudfile a {
+    outline: 0 none;
+}
